@@ -57,7 +57,7 @@ def box_office_data():
     # 1.7 TODO: Print the top 10 movies in `top_100` as a list.
     # Use 'slicing' to accomplish this!
     print(top_100[0:10])
-box_office_data()    
+
 def create_employee_email_address():
     # Production is going well, now you need to hire a sales person!
     # It's typical when you hire a new employee in your company to setup an email address for them
@@ -69,20 +69,18 @@ def create_employee_email_address():
 
     # 2.1 TODO: Let's save the lowercase version of the employee_name in a new variable 'lower_name'
     # (use a string method to lower the name). Print out the variable.
-    lower_name = 'ash rahman'
+    lower_name = employee_name.lower()
     print(lower_name)
     # 2.2 TODO: We want to separate the first name and last name and save it in a variable 'names_list'
     # (use a string method to split the string into a list) Print out the variable.
-    names_list = 'Ash#Rahman'
-    x = names_list.split("#")
-    print(x)
+    names_list = lower_name.split(" ")
+    print(names_list)
     # 2.3 TODO: We want to join the first name and last name with a '.' and save it in a variable called
-    # `joined_names` (use a string method to join the list into a new string) Print out the variable.
-    joined_names = "Ash", "Rahman"
-    y = '.'.join(joined_names)
-    print(y)
+    # `joined_names` (use a string method to join the list into a new string) Print out  the variable.
+    joined_names = names_list[0] + "." + names_list[1]
+    print(joined_names)
     # 2.4 TODO: We want to add '@ripplemedia.com' to the end of the string inside joined_names and
     # save it in a variable `email` (use an f-string to combine the username with the email domain)
     # Print out the variable.
-    email = '@ripplemedia.com'
-    print(f'{joined_names},{email}') 
+    email =f'{joined_names}@ripplemedia.com'
+    print(email) 
